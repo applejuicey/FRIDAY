@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'false' or 'media'
   theme: {
     extend: {},
   },
