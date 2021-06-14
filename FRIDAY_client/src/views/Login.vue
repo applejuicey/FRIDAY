@@ -1,7 +1,7 @@
 <template>
 
   <div class="flex flex-col justify-center min-h-screen bg-gray-100 py-6
-       dark:bg-gray-200">
+       dark:bg-gray-500">
 
     <div class="relative sm:max-w-xl sm:mx-auto">
 
@@ -40,10 +40,11 @@
                   6h2.764L13 11.236 11.618 14z" clip-rule="evenodd" />
             </svg>
         </div>
-        <div class="justify-self-center mb-6 text-xl text-gray-600 sm:text-2xl dark:text-white">
+        <div class="justify-self-center mb-6 text-xl text-gray-600 sm:text-2xl
+             dark:text-gray-200">
           Login
         </div>
-        <div class="self-center my-3">
+        <div class="justify-self-center w-full my-3">
           <f-input v-model="userInfo.email" :id="'email'" :placeholder="'Email'" :show-icon-left="true">
             <template v-slot:icon>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
@@ -54,7 +55,7 @@
             </template>
           </f-input>
         </div>
-        <div class="justify-self-center w-full mt-3">
+        <div class="justify-self-center w-full my-3">
           <f-input v-model="userInfo.password" :id="'password'" :placeholder="'Password'"
                    :type="'password'" :show-icon-left="true">
             <template v-slot:icon>
@@ -68,8 +69,8 @@
         </div>
         <div class="justify-self-end mb-3">
           <a href="#" class="text-xs font-thin text-gray-500 hover:text-gray-700
-             sm:text-sm dark:text-gray-100 dark:hover:text-white">
-            Forgot your password?
+             sm:text-sm dark:text-gray-200 dark:hover:text-white">
+            Forgot password?
           </a>
         </div>
         <div class="justify-self-center w-full my-3">
@@ -85,10 +86,10 @@
             </div>
           </f-button>
         </div>
-        <div class="justify-self-center w-full">
+        <div class="justify-self-center">
           <a href="#" target="_blank" class="text-xs font-thin text-gray-500 hover:text-gray-700
-             dark:text-gray-100 dark:hover:text-white">
-            You don&#x27;t have an account?
+             dark:text-gray-200 dark:hover:text-white">
+            Don&#x27;t have an account?
           </a>
         </div>
 
