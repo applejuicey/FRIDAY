@@ -1,8 +1,19 @@
 module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js}'],
-  darkMode: 'class', // or 'false' or 'media'
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      minHeight: {
+        '5vh': '5vh',
+        '90vh': '90vh',
+      },
+      maxHeight: {
+        '90vh': '90vh',
+      },
+      top: {
+        '5vh': '5vh',
+      },
+    },
   },
   variants: {
     extend: {},

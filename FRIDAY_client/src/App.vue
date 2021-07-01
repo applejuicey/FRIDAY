@@ -6,20 +6,20 @@
 
 <script>
 import { onBeforeMount } from 'vue';
+import { useStore } from 'vuex';
 export default {
   setup () {
-    onBeforeMount(() => {
-      let themeName = '';
-      try {
-        themeName = JSON.parse(localStorage.theme).name;
-      } catch (e) {
-        console.log('No preferred themes saved.');
-      }
-      if (themeName === 'dark') {
+    const store = useStore();
+    // 从vuex中获取主题信息并应用
+    const initialiseTheme = () => {
+      if (store.state.theme.name === 'dark') {
         document.documentElement.classList.add('dark')
       } else {
         document.documentElement.classList.remove('dark')
       }
+    };
+    onBeforeMount(() => {
+      initialiseTheme();
     });
     return {
 

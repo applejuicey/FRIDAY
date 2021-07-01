@@ -1,16 +1,43 @@
-import { createStore, createLogger } from 'vuex';
+import { createStore } from 'vuex';
+import createPersistedState from "vuex-persistedstate";
 // import cart from './modules/cart'
 // import products from './modules/products'
 
-const debug = process.env.NODE_ENV !== 'production';
+// 全局状态
+const state = {
+  theme: {},
+};
+
+const getters = {
+
+};
+
+const mutations = {
+  setTheme: (state, payload) => {
+    for (let key in payload) {
+      state.theme[key] = payload[key];
+    }
+  }
+};
 
 const store = createStore({
+  state,
+  getters,
+  mutations,
   modules: {
     // cart,
     // products
   },
-  strict: debug,
-  plugins: debug ? [createLogger()] : [],
+  plugins: [
+    createPersistedState({
+      // 只储存state中的以下内容
+      reducer(state) {
+        return {
+          theme: state.theme
+        }
+      }
+    }),
+  ],
 })
 
 export {
