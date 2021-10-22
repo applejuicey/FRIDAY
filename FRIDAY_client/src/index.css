@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   @font-face {
-    font-family: 'Flamenco', cursive;
+    /*font-family: 'Flamenco', cursive;*/
+    font-family: 'Mulish', sans-serif;
     font-weight: 400;
   }
 }

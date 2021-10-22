@@ -1,34 +1,16 @@
 import { createStore } from 'vuex';
 import createPersistedState from "vuex-persistedstate";
-// import cart from './modules/cart'
-// import products from './modules/products'
-
-// 全局状态
-const state = {
-  theme: {},
-};
-
-const getters = {
-
-};
-
-const mutations = {
-  setTheme: (state, payload) => {
-    for (let key in payload) {
-      state.theme[key] = payload[key];
-    }
-  }
-};
+import { api } from "../services/index";
+import theme from './theme';
+import auth from '../modules/auth/store';
 
 const store = createStore({
-  state,
-  getters,
-  mutations,
   modules: {
-    // cart,
-    // products
+    auth,
+    theme,
   },
   plugins: [
+    // 持久化存储-防止页面刷新后丢失数据
     createPersistedState({
       // 只储存state中的以下内容
       reducer(state) {
@@ -37,6 +19,14 @@ const store = createStore({
         }
       }
     }),
+    // 可以在vuex中使用$api访问后端服务
+    function(store) {
+      try {
+        store.$api = api;
+      } catch (e) {
+        console.error(e);
+      }
+    },
   ],
 })
 

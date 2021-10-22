@@ -98,10 +98,10 @@
 
 <script>
 import { computed, reactive } from 'vue';
-import FButton from '../components/Button.vue';
-import FInput from '../components/Input.vue';
+import FButton from '../../components/Button.vue';
+import FInput from '../../components/Input.vue';
 import { useStore } from "vuex";
-import { router } from '../routes/index';
+import { router } from '../../routes';
 export default {
   components: {
     FButton, FInput

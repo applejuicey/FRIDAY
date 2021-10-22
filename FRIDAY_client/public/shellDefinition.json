@@ -1,0 +1,74 @@
+{
+  "shellID": "ZXCVBNM",
+  "shellVersion": "V 0.2",
+  "shellLevelData": {
+    "studyTitle": "Evaluation of the Efficacy and Safety of INS068 Injection and Insulin Degludec Subcutaneous Injection Once Daily in Subjects With Type 2 Diabetes Mellitus Not Adequately Controlled With One or Two Oral Antidiabetics (A Randomized, Open-Label, Two-Arm, Treat-to-Target, Parallel Controlled Trial)",
+    "protocolNumber": "INS068-201",
+    "date": "2021-03-24",
+    "sponsorName": "Jiangsu Hengrui Medicine Co., Ltd.",
+    "shellNote": [
+      "N : Number of subjects in the treatment group included in the analysis set.",
+      "SE: Standard error of the mean.",
+      "CI: Confidence interval."
+    ]
+  },
+  "shellContent": [
+    {
+      "tflID": "ZXCVBNM",
+      "tflType": "table",
+      "tflLevelData": {
+        "title": [
+          "Subject Disposition",
+          "Subtitle"
+        ],
+        "number": "14.1",
+        "population": "All",
+        "footnote": [
+          "Percentage is calculated only if the numerator is unequal tonot 0, with number of subjects randomized as denominator. ",
+          "The second footnote"
+        ],
+        "programmingNote": [
+          "note1",
+          "note2",
+          "note3"
+        ],
+        "sourceData": [
+          "ADSL",
+          "ADDV"
+        ],
+        "sourceListing": [
+          "Listing 16.1.1",
+          "Listing 16.1.2"
+        ],
+        "txtName": "table_subject_disposition"
+      }
+    },
+    {
+      "tflID": "QWERTY",
+      "tflType": "listing",
+      "tflLevelData": {
+        "title": [
+          "Subject Enrollment and Analysis Sets - Enrolled",
+          "Subtitle"
+        ],
+        "number": "16.2.1.1",
+        "population": "All",
+        "footnote": [
+          "Percentage is calculated only if the numerator is unequal tonot 0, with number of subjects randomized as denominator. ",
+          "The second footnote"
+        ],
+        "programmingNote": [
+          "note1",
+          "note2",
+          "note3"
+        ],
+        "sourceData": [
+          "ADSL",
+          "ADDV"
+        ],
+        "sourceListing": [],
+        "txtName": "listing_subject_disposition"
+      }
+    }
+  ]
+}
